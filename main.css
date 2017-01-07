@@ -1,0 +1,16 @@
+nav  ul{
+	margin: 50px;
+	display: inline;
+}
+
+nav  li{
+	cursor: pointer;
+	margin: 10px;
+	padding: 10px 20px;
+	display: inline;
+	border: 2px solid #bddfbd;
+}
+
+canvas {
+	margin: 20px;
+}
