@@ -1,6 +1,6 @@
 var canvas = document.getElementById("gameCanvas");
-canvas.width = "800";
-canvas.height = "600";
+canvas.width = "700";
+canvas.height = "500";
 var ctx = canvas.getContext("2d");
 
 	//pause variable
@@ -37,7 +37,7 @@ window.onload = function(){
 var framesPerSecond = 60;
 
 setInterval(function(){
-	//paddleAI();
+	paddleAI();
 	moveEverything();
 	dRaw();
 }, 1000/framesPerSecond); //do something every so miliseconds
@@ -146,12 +146,13 @@ function moveEverything(){
 		}
 		
 		//Paddle 2 Key Controls
-		if(paddle2Up){
-			paddle2Y = paddle2Y - 15; 
-		}
-		if(paddle2Down){
-			paddle2Y = paddle2Y + 15; 
-		}
+		// if(paddle2Up){
+			// paddle2Y = paddle2Y - 15; 
+		// }
+		// if(paddle2Down){
+			// paddle2Y = paddle2Y + 15; 
+		// }
+		// left right controls
 		//if(paddle2Left){
 		//	paddle2X = paddle2X - 8;
 		//}
@@ -165,11 +166,11 @@ function paddleAI(){
 	if(pause == 1){
 		//paddle2
 		if(Yball > (paddle2Y + paddleHeight/2)){
-			paddle2Y += Math.abs(ballSpeedY)/2;
+			paddle2Y += Math.abs(ballSpeedY)*8/10;
 		}
 		
 		if(Yball < (paddle2Y + paddleHeight/2)){
-			paddle2Y -= Math.abs(ballSpeedY)/2;
+			paddle2Y -= Math.abs(ballSpeedY)*8/10;
 		}
 	}
 }
