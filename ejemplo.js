@@ -195,7 +195,6 @@ function dRaw(){
     //color of gridBlock
     if(gridBlockState == 0){
         gridBlockColor = "black";
-        console.log("!")
     }
     else if(gridBlockState == 1){
         gridBlockColor = "red";
