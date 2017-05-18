@@ -10,8 +10,8 @@ body {
 	text-align: center;
 }
 
-#gameCanvas {
-	margin: 20px;
+canvas {
+	margin: auto;
 	border: 4px solid #bdbfc1;
 }
 
