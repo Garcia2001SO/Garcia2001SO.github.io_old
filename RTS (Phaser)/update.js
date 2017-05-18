@@ -57,19 +57,17 @@ function moveStar(){
 function pointerHandler(){
     //LEFT
     if(game.input.activePointer.leftButton.isDown){
-        if(isSelected){
-            isSelected = false;
-            console.log('deselected');
-        }
+        calcPointerWorldCoords();
+        moveStar();
     }
     //MIDDLE
-    if(game.input.activePointer.middleButton.isDown && isSelected){
+    if(game.input.activePointer.middleButton.isDown){
         calcPointerWorldCoords();
         image.position.x = coordinatesX;
         image.position.y = coordinatesY;
     }
     //RIGHT
-    if(game.input.activePointer.rightButton.isDown && isSelected){
+    if(game.input.activePointer.rightButton.isDown){
         calcPointerWorldCoords();
         moveStar();
     }
